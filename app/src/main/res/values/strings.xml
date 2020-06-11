@@ -27,5 +27,9 @@
     <string name="Question_five_option_one">Chill at home</string>
     <string name="Question_five_option_two">Drink chloroquine</string>
     <string name="Question_five_option_three">Seek medical attention</string>
+    <string name="hello_blank_fragment">hello blank fragment</string>
+    <string name="prevention_header">Prevention</string>
+    <string name="previous_button">Previous</string>
+    <string name="next_button">Next</string>
 
 </resources>
