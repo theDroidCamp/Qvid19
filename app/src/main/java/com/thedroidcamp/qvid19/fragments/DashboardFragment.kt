@@ -4,33 +4,42 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.thedroidcamp.qvid19.R
+import com.thedroidcamp.qvid19.databinding.FragmentDashboardBinding
 
 /**
- * A simple [Fragment] subclass.
- * Use the [DashboardFragment.newInstance] factory method to
- * create an instance of this fragment.
+ * A simple [Fragment] subclass..
  */
 class DashboardFragment : Fragment() {
 
 
     lateinit var navController: NavController
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        navController = Navigation.findNavController(view)
-    }
+    private lateinit var _binding: FragmentDashboardBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        _binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_dashboard,
+            container,
+            false
+        )
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+        return _binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        navController = Navigation.findNavController(view)
+
+
+    }
 
 }
