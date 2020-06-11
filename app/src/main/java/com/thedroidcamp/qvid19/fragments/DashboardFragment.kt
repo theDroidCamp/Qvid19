@@ -39,9 +39,11 @@ class DashboardFragment : Fragment() {
     }
 
     private fun takeQuiz() {
+        navController.navigate(DashboardFragmentDirections.actionDashboardFragmentToQuestionOneFragment())
     }
 
     private fun readMore() {
+        navController.navigate(DashboardFragmentDirections.actionDashboardFragmentToAboutFragment())
 
     }
 
