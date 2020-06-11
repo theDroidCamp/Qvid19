@@ -31,8 +31,18 @@ class DashboardFragment : Fragment() {
             container,
             false
         )
+
+        _binding.readMoreButton.setOnClickListener { readMore() }
+        _binding.takeQuizButton.setOnClickListener { takeQuiz() }
         // Inflate the layout for this fragment
         return _binding.root
+    }
+
+    private fun takeQuiz() {
+    }
+
+    private fun readMore() {
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
