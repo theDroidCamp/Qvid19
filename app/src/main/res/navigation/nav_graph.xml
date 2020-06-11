@@ -9,5 +9,22 @@
         android:id="@+id/dashboardFragment"
         android:name="com.thedroidcamp.qvid19.fragments.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_questionOneFragment"
+            app:destination="@id/questionOneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/questionOneFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.QuestionOneFragment"
+        android:label="fragment_question_one"
+        tools:layout="@layout/fragment_question_one" />
 </navigation>
