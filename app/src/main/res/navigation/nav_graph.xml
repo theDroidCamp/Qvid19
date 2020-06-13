@@ -86,7 +86,7 @@
             android:id="@+id/action_questionTwoFragment_to_questionThreeFragment"
             app:destination="@id/questionThreeFragment" />
         <action
-            android:id="@+id/action_questionTwoFragment_to_questionOneFragment"
+            android:id="@+id/action_questionTwoFragment_to_questionOneFragment2"
             app:destination="@id/questionOneFragment" />
     </fragment>
     <fragment

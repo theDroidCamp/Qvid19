@@ -38,6 +38,7 @@ class QuestionTwoFragment : Fragment() {
         )
 
         binding.btnNext.setOnClickListener { goToNext() }
+        binding.btnPrevious.setOnClickListener { goToPrevious() }
         binding.questionTwo = this
         binding.invalidateAll()
         return binding.root
@@ -47,6 +48,9 @@ class QuestionTwoFragment : Fragment() {
         navController.navigate(QuestionTwoFragmentDirections.actionQuestionTwoFragmentToQuestionThreeFragment())
     }
 
+    fun goToPrevious(){
+        navController.navigate(QuestionTwoFragmentDirections.actionQuestionTwoFragmentToQuestionOneFragment())
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
