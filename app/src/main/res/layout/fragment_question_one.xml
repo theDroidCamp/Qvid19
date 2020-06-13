@@ -28,6 +28,7 @@
             app:layout_constraintVertical_bias="1"
             android:text="Score :"
             android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
             android:textSize="@dimen/secondaryTextSize"
             android:textColor="#ffffff"
             />
@@ -45,7 +46,6 @@
             android:textSize="@dimen/heading_text_size"
             android:textColor="#ffffff"
             android:id="@+id/scoreView"
-            android:layout_marginStart="5dp"
             android:textStyle="bold"
             />
 
@@ -127,6 +127,7 @@
                     app:layout_constraintVertical_bias="0.5"
                     android:orientation="vertical"
                     android:gravity="center|start"
+                    android:id="@+id/answerGroup"
                     >
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:layout_width="wrap_content"
@@ -139,7 +140,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Question_one_option_two"
-                        android:id="@+id/optionTowRadioBtn"
+                        android:id="@+id/optionTwoRadioBtn"
                         android:textSize="@dimen/radioBtnTextSize"
                         />
                     <com.google.android.material.radiobutton.MaterialRadioButton
