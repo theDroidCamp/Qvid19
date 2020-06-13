@@ -27,11 +27,6 @@
     <string name="Question_five_option_one">Chill at home</string>
     <string name="Question_five_option_two">Drink chloroquine</string>
     <string name="Question_five_option_three">Seek medical attention</string>
-
-    <string name="prevention_header">Prevention</string>
-    <string name="previous_button">Previous</string>
-    <string name="next_button">Next</string>
-
     <string name="hello_blank_fragment">Hello</string>
     <string name="qvid_19">QVID \'19</string>
     <string name="description">QVID \'19 is a quiz app about the dreaded pandemic named corona virus which started in China and spread around the world</string>

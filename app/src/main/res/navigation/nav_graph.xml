@@ -51,13 +51,7 @@
         tools:layout="@layout/fragment_prevention">
         <action
             android:id="@+id/action_preventionFragment_to_treatmentsFragment"
-            app:destination="@id/treatmentsFragment"
-            app:popUpTo="@id/treatmentsFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_preventionFragment_to_symptomsFragment"
-            app:destination="@id/symptomsFragment"
-            app:popUpTo="@id/symptomsFragment" />
+            app:destination="@id/treatmentsFragment" />
     </fragment>
     <fragment
         android:id="@+id/questionFiveFragment"
