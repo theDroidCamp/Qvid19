@@ -5,9 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+<<<<<<< HEAD
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+=======
+import android.widget.Toast
+import com.thedroidcamp.qvid19.MainActivity
+>>>>>>> upstream/master
 import com.thedroidcamp.qvid19.R
 import com.thedroidcamp.qvid19.databinding.FragmentQuestionTwoBinding
 import kotlinx.android.synthetic.main.fragment_question_two.*
