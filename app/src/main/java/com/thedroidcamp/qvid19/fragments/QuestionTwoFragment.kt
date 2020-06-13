@@ -23,10 +23,9 @@ import kotlinx.android.synthetic.main.fragment_question_two.*
  * create an instance of this fragment.
  */
 
-lateinit var navController: NavController
-
 class QuestionTwoFragment : Fragment() {
 
+    lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,11 +43,11 @@ class QuestionTwoFragment : Fragment() {
         return binding.root
     }
 
-    fun goToNext(){
+   private fun goToNext(){
         navController.navigate(QuestionTwoFragmentDirections.actionQuestionTwoFragmentToQuestionThreeFragment())
     }
 
-    fun goToPrevious(){
+   private fun goToPrevious(){
         navController.navigate(QuestionTwoFragmentDirections.actionQuestionTwoFragmentToQuestionOneFragment())
     }
 
