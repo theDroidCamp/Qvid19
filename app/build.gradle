@@ -32,12 +32,10 @@ android {
     buildFeatures{
         dataBinding = true
         // for view binding :
-<<<<<<< HEAD
         // viewBinding = true
 //upstream/master
-=======
+
          viewBinding = true
->>>>>>> upstream/master
     }
 }
 

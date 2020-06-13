@@ -9,160 +9,198 @@
             type="com.thedroidcamp.qvid19.fragments.QuestionTwoFragment" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/purple_ish">
+        tools:context=".fragments.QuestionOneFragment">
 
-        <TextView
-            android:id="@+id/tv_score_text"
-            android:layout_width="61dp"
-            android:layout_height="55dp"
-            android:layout_gravity="right"
-            android:gravity="center_vertical"
-            android:text="Score:"
-            android:textColor="@color/colorAccent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tv_score"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.054" />
 
-        <TextView
-            android:id="@+id/tv_score"
-            android:layout_width="42dp"
-            android:layout_height="56dp"
-            android:layout_gravity="right"
-            android:gravity="center_vertical"
-            android:text=""
-            android:textColor="@color/whitish"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_score_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_score_text" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/layoutMargin"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/scoreView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/mainDivider"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintVertical_bias="1"
+                android:text="Score :"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="@dimen/secondaryTextSize"
+                android:textColor="#ffffff"
+                />
 
-        <LinearLayout
-            android:layout_width="392dp"
-            android:layout_height="556dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/curve_box"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_score_text">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/mainDivider"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintHorizontal_bias="1"
+                android:text="11"
+                android:textSize="@dimen/heading_text_size"
+                android:textColor="#ffffff"
+                android:id="@+id/scoreView"
+                android:textStyle="bold"
+                />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.2"
+                android:id="@+id/mainDivider"
+                />
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Q2"
-                    android:textColor="@android:color/background_dark"
-                    android:textSize="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.066"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.043" />
-
-                <TextView
-                    android:id="@+id/textView3"
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainDivider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:cardCornerRadius="@dimen/cardRadius"
+                style="@style/MyCardView"
+                android:layout_marginTop="@dimen/cardMarginTop"
+                app:contentPadding="@dimen/cardContentPadding"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:text="@string/Question2"
-                    android:textSize="25dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.074" />
+                    android:layout_height="match_parent"
 
-                <RadioGroup
-                    android:id="@+id/radioGroup"
-                    android:layout_width="333dp"
-                    android:layout_height="95dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.451"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3"
-                    app:layout_constraintVertical_bias="0.291">
-
-
-                    <RadioButton
-                        android:id="@+id/radioButton"
-                        android:layout_width="match_parent"
+                    >
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/Question_two_option_one" />
+                        android:text="Q2"
+                        android:textSize="@dimen/questionNoTextSize"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0"
+                        app:layout_constraintHorizontal_bias="0"
+                        android:id="@+id/questionNoView"
+                        />
 
-                    <RadioButton
-                        android:id="@+id/radioButton2"
-                        android:layout_width="match_parent"
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/Question_two_option_two" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/questionNoView"
+                        app:layout_constraintBottom_toTopOf="@+id/cardDiv1"
+                        android:text="@string/Question2"
+                        android:gravity="center"
+                        android:textSize="@dimen/questionTextSize"
+                        android:id="@+id/questionView"
+                        />
 
-                    <RadioButton
-                        android:id="@+id/radioButton3"
-                        android:layout_width="match_parent"
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/questionNoView"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.3"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/cardDiv1"
+                        />
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardDiv1"
+                        app:layout_constraintBottom_toTopOf="@+id/cardDiv2"
+                        app:layout_constraintVertical_bias="0.5"
+                        android:orientation="vertical"
+                        android:gravity="center|start"
+                        android:id="@+id/answerGroup"
+                        >
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Question_two_option_one"
+                            android:id="@+id/optionOneRadioBtn"
+                            android:textSize="@dimen/radioBtnTextSize"
+                            />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Question_two_option_two"
+                            android:id="@+id/optionTwoRadioBtn"
+                            android:textSize="@dimen/radioBtnTextSize"
+                            />
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Question_two_option_three"
+                            android:id="@+id/optionThreeRadioBtn"
+                            android:textSize="@dimen/radioBtnTextSize"
+                            />
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/questionNoView"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.8"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/cardDiv2"
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/Question_two_option_three" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardDiv2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.5"
+                        android:text="@string/previous"
+                        app:layout_constraintHorizontal_bias="0"
+                        android:textSize="@dimen/nextPrevTextSize"
+                        android:textStyle="bold"
+                        android:textColor="@color/textLinkInActive"
+                        android:id="@+id/previousLink"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardDiv2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.5"
+                        android:text="@string/next"
+                        app:layout_constraintHorizontal_bias="1"
+                        android:textSize="@dimen/nextPrevTextSize"
+                        android:textStyle="bold"
+                        android:textColor="@color/textLinkActive"
+                        android:id="@+id/nextLink"
+                        />
 
-                </RadioGroup>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <Button
-                    android:id="@+id/btn_previous"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="68dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@color/whitish"
-                    android:text="Previous"
-                    android:textColor="@color/greenish"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_next"
-                    app:layout_constraintHorizontal_bias="0.152"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <Button
-                    android:id="@+id/btn_next"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="44dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/whitish"
-                    android:text="Next"
-                    android:textColor="@color/purple_ish"
-                    app:layout_constraintBottom_toBottomOf="@+id/btn_previous"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/btn_previous"
-                    app:layout_constraintVertical_bias="0.0" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 </layout>
