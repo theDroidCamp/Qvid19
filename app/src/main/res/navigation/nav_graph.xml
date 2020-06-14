@@ -118,6 +118,7 @@
             app:destination="@id/preventionFragment"
             app:popUpTo="@id/preventionFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/treatmentsFragment"
         android:name="com.thedroidcamp.qvid19.fragments.TreatmentsFragment"
@@ -126,6 +127,11 @@
         <action
             android:id="@+id/action_treatmentsFragment_to_hoorayFragment"
             app:destination="@id/hoorayFragment"
-            app:popUpTo="@id/hoorayFragment" />
+            app:popUpTo="@id/hoorayFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_treatmentsFragment_to_preventionFragment"
+            app:destination="@id/preventionFragment"
+            app:popUpTo="@id/preventionFragment"/>
     </fragment>
 </navigation>
