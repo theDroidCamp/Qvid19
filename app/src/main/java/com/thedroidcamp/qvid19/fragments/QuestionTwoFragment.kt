@@ -5,58 +5,83 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import android.widget.Toast
 import com.thedroidcamp.qvid19.MainActivity
 import com.thedroidcamp.qvid19.R
+import com.thedroidcamp.qvid19.databinding.FragmentQuestionTwoBinding
+import kotlinx.android.synthetic.main.fragment_question_two.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+//private const val ARG_PARAM1 = "param1"
+//private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
  * Use the [QuestionTwoFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class QuestionTwoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+class QuestionTwoFragment : Fragment() {
+
+    lateinit var navController: NavController
+    private lateinit var _binding: FragmentQuestionTwoBinding
+    private lateinit var mainActivity: MainActivity
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_question_two, container, false)
+        mainActivity =
+            context as MainActivity // doing this because running i don't know about how to pass the score to next fragment
+        if (mainActivity.q2Answered) {
+            _binding.answerGroup.isEnabled = false
+            setAllRadioButtonDisable()
+        }
+        _binding = DataBindingUtil.inflate<FragmentQuestionTwoBinding>(
+            inflater, R.layout.fragment_question_two, container, false
+        )
+        _binding.questionTwo = this
+        _binding.invalidateAll()
+        return _binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment QuestionTwoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            QuestionTwoFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun setAllRadioButtonDisable() {
+        _binding.optionOneRadioBtn.isEnabled = false
+        _binding.optionTwoRadioBtn.isEnabled = false
+        _binding.optionThreeRadioBtn.isEnabled = false
+
     }
+
+    private fun goToNext() {
+        navController.navigate(QuestionTwoFragmentDirections.actionQuestionTwoFragmentToQuestionThreeFragment())
+        when (_binding.answerGroup.checkedRadioButtonId) {
+            -1 -> return
+            _binding.optionThreeRadioBtn.id -> addUpScore()
+        }
+        //save a state that question one answered already
+        mainActivity.setAnswered(2) //setting answer id 1 as answered
+    }
+
+    private fun goToPrevious() {
+        navController.navigate(QuestionTwoFragmentDirections.actionQuestionTwoFragmentToQuestionOneFragment2())
+    }
+
+    private fun addUpScore() {
+        mainActivity.calculateScore(10) //giving 10 point for correct answer
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        navController = Navigation.findNavController(view)
+        _binding.scoreView.text = mainActivity.currentScore.toString()
+        _binding.nextLink.setOnClickListener { goToNext() }
+        _binding.previousLink.setOnClickListener { goToPrevious() }
+    }
+
+
 }

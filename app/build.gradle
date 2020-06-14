@@ -2,7 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin:  "androidx.navigation.safeargs.kotlin"
+
 
 android {
     compileSdkVersion 29
@@ -25,9 +26,13 @@ android {
         }
     }
 
+
     buildFeatures{
         dataBinding = true
         // for view binding :
+        // viewBinding = true
+//upstream/master
+
          viewBinding = true
     }
 }
