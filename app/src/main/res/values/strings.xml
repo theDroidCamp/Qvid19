@@ -40,4 +40,8 @@
     <string name="white_background">White background</string>
     <string name="covid_image">Covid Image</string>
 
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
 </resources>
