@@ -18,23 +18,29 @@ class PreventionFragment : Fragment() {
 
     private lateinit var binding: FragmentPreventionBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        
-         binding = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_prevention, container, false)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
-        prevention_fragment_text.text = preventions
-
-        prevention_fragment_previous_btn.setOnClickListener(
-            Navigation.createNavigateOnClickListener(
-                R.id.action_preventionFragment_to_symptomsFragment)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_prevention, container, false
         )
 
-        prevention_fragment_next_btn.setOnClickListener(
+        binding.preventionFragmentPreviousBtn.setOnClickListener(
             Navigation.createNavigateOnClickListener(
-                R.id.action_preventionFragment_to_treatmentsFragment)
+                R.id.action_preventionFragment_to_symptomsFragment
+            )
         )
+
+        binding.preventionFragmentNextBtn.setOnClickListener(
+            Navigation.createNavigateOnClickListener(
+                R.id.action_preventionFragment_to_treatmentsFragment
+            )
+        )
+
+        binding.preventionFragmentText.text = preventions
 
         return binding.root
     }
