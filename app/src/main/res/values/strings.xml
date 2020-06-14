@@ -39,5 +39,14 @@
     <string name="take_quiz">Take Quiz</string>
     <string name="white_background">White background</string>
     <string name="covid_image">Covid Image</string>
+    <string name="treatments_Header">Treatments</string>
+    <string name="treatments_fragment_text">"To date, there are no specific vaccines or medicines for COVID-19. Treatments are under investigation, and will be tested through clinical trials. World Health Organization\n" +
+            "Self care\n" +
+            "If you feel sick you should rest, drink plenty of fluid, and eat nutritious food. Stay in a separate room from other family members, and use a dedicated bathroom if possible. Clean and disinfect frequently touched surfaces.\n" +
+            "Everyone should keep a healthy lifestyle at home. Maintain a healthy diet, sleep, stay active, and make social contact with loved ones through the phone or internet. Children need extra love and attention from adults during difficult times. Keep to regular routines and schedules as much as possible.\n" +
+            "It is normal to feel sad, stressed, or confused during a crisis. Talking to people you trust, such as friends and family, can help. If you feel overwhelmed, talk to a health worker or counsellor.\n" +
+            "Medical treatments\n" +
+            "If you have mild symptoms and are otherwise healthy, self-isolate and contact your medical provider or a COVID-19 information line for advice.\n" +
+            "Seek medical care if you have a fever, a cough, and difficulty breathing. Call in advance"</string>
 
 </resources>
