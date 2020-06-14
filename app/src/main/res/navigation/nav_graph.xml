@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_questionOneFragment"
+            app:destination="@id/questionOneFragment"
+            app:popUpTo="@id/questionOneFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:popUpTo="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about">
+        <action
+            android:id="@+id/action_aboutFragment_to_symptomsFragment"
+            app:destination="@id/symptomsFragment"
+            app:popUpTo="@id/symptomsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionOneFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.QuestionOneFragment"
+        android:label="fragment_question_one"
+        tools:layout="@layout/fragment_question_one">
+        <action
+            android:id="@+id/action_questionOneFragment_to_questionTwoFragment"
+            app:destination="@id/questionTwoFragment"
+            app:popUpTo="@id/questionTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hoorayFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.HoorayFragment"
+        android:label="fragment_hooray"
+        tools:layout="@layout/fragment_hooray">
+        <action
+            android:id="@+id/action_hoorayFragment_to_questionOneFragment"
+            app:destination="@id/questionOneFragment"
+            app:popUpTo="@id/questionOneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/preventionFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.PreventionFragment"
+        android:label="fragment_prevention"
+        tools:layout="@layout/fragment_prevention">
+        <action
+            android:id="@+id/action_preventionFragment_to_treatmentsFragment"
+            app:destination="@id/treatmentsFragment"
+            app:popUpTo="@id/treatmentsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_preventionFragment_to_symptomsFragment"
+            app:destination="@id/symptomsFragment"
+            app:popUpTo="@id/symptomsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFiveFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.QuestionFiveFragment"
+        android:label="fragment_question_five"
+        tools:layout="@layout/fragment_question_five">
+        <action
+            android:id="@+id/action_questionFiveFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFourFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.QuestionFourFragment"
+        android:label="fragment_question_four"
+        tools:layout="@layout/fragment_question_four">
+        <action
+            android:id="@+id/action_questionFourFragment_to_questionFiveFragment"
+            app:destination="@id/questionFiveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionTwoFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.QuestionTwoFragment"
+        android:label="fragment_question_two"
+        tools:layout="@layout/fragment_question_two">
+        <action
+            android:id="@+id/action_questionTwoFragment_to_questionThreeFragment"
+            app:destination="@id/questionThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionThreeFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.QuestionThreeFragment"
+        android:label="fragment_question_three"
+        tools:layout="@layout/fragment_question_three">
+        <action
+            android:id="@+id/action_questionThreeFragment_to_questionFourFragment"
+            app:destination="@id/questionFourFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+    <fragment
+        android:id="@+id/symptomsFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.SymptomsFragment"
+        android:label="fragment_symptoms"
+        tools:layout="@layout/fragment_symptoms">
+        <action
+            android:id="@+id/action_symptomsFragment_to_preventionFragment"
+            app:destination="@id/preventionFragment"
+            app:popUpTo="@id/preventionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/treatmentsFragment"
+        android:name="com.thedroidcamp.qvid19.fragments.TreatmentsFragment"
+        android:label="fragment_treatments"
+        tools:layout="@layout/fragment_treatments">
+        <action
+            android:id="@+id/action_treatmentsFragment_to_hoorayFragment"
+            app:destination="@id/hoorayFragment"
+            app:popUpTo="@id/hoorayFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_treatmentsFragment_to_preventionFragment"
+            app:destination="@id/preventionFragment"
+            app:popUpTo="@id/preventionFragment"/>
+    </fragment>
+</navigation>
