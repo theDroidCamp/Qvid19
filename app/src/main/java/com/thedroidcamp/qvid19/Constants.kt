@@ -17,7 +17,8 @@ const val preventions =
             "Stay home if you feel unwell.\n" +
             "If you have a fever, cough and difficulty breathing, seek medical attention. Call in advance.\n" +
             "Follow the directions of your local health authority.\n" +
-            "Avoiding unneeded visits to medical facilities allows healthcare systems to operate more effectively, therefore protecting you and others"
+            "Avoiding unneeded visits to medical facilities allows healthcare systems to operate more effectively, therefore protecting you and others.\n" +
+            "yourself and others around you by knowing the facts and taking appropriate precautions. Follow advice provided by your local public health agency."
 const val symptoms =
     "COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.\n" +
             "Most common symptoms:\n" +

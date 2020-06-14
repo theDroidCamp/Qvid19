@@ -37,7 +37,6 @@ class DashboardFragment : Fragment() {
 
     private fun readMore() {
         navController.navigate(DashboardFragmentDirections.actionDashboardFragmentToAboutFragment())
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
