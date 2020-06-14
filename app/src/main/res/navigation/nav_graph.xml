@@ -11,11 +11,13 @@
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard">
         <action
-            android:id="@+id/action_dashboardFragment_to_aboutFragment"
-            app:destination="@id/aboutFragment" />
-        <action
             android:id="@+id/action_dashboardFragment_to_questionOneFragment"
-            app:destination="@id/questionOneFragment" />
+            app:destination="@id/questionOneFragment"
+            app:popUpTo="@id/questionOneFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:popUpTo="@id/aboutFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -24,7 +26,8 @@
         tools:layout="@layout/fragment_about">
         <action
             android:id="@+id/action_aboutFragment_to_symptomsFragment"
-            app:destination="@id/symptomsFragment" />
+            app:destination="@id/symptomsFragment"
+            app:popUpTo="@id/symptomsFragment" />
     </fragment>
     <fragment
         android:id="@+id/questionOneFragment"
@@ -33,7 +36,8 @@
         tools:layout="@layout/fragment_question_one">
         <action
             android:id="@+id/action_questionOneFragment_to_questionTwoFragment"
-            app:destination="@id/questionTwoFragment" />
+            app:destination="@id/questionTwoFragment"
+            app:popUpTo="@id/questionTwoFragment" />
     </fragment>
     <fragment
         android:id="@+id/hoorayFragment"
@@ -42,7 +46,8 @@
         tools:layout="@layout/fragment_hooray">
         <action
             android:id="@+id/action_hoorayFragment_to_questionOneFragment"
-            app:destination="@id/questionOneFragment" />
+            app:destination="@id/questionOneFragment"
+            app:popUpTo="@id/questionOneFragment" />
     </fragment>
     <fragment
         android:id="@+id/preventionFragment"
@@ -107,7 +112,8 @@
         tools:layout="@layout/fragment_symptoms">
         <action
             android:id="@+id/action_symptomsFragment_to_preventionFragment"
-            app:destination="@id/preventionFragment" />
+            app:destination="@id/preventionFragment"
+            app:popUpTo="@id/preventionFragment" />
     </fragment>
     <fragment
         android:id="@+id/treatmentsFragment"
@@ -116,6 +122,7 @@
         tools:layout="@layout/fragment_treatments">
         <action
             android:id="@+id/action_treatmentsFragment_to_hoorayFragment"
-            app:destination="@id/hoorayFragment" />
+            app:destination="@id/hoorayFragment"
+            app:popUpTo="@id/hoorayFragment" />
     </fragment>
 </navigation>
