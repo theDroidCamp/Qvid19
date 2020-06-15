@@ -17,7 +17,8 @@ const val preventions =
             "Stay home if you feel unwell.\n" +
             "If you have a fever, cough and difficulty breathing, seek medical attention. Call in advance.\n" +
             "Follow the directions of your local health authority.\n" +
-            "Avoiding unneeded visits to medical facilities allows healthcare systems to operate more effectively, therefore protecting you and others"
+            "Avoiding unneeded visits to medical facilities allows healthcare systems to operate more effectively, therefore protecting you and others.\n" +
+            "yourself and others around you by knowing the facts and taking appropriate precautions. Follow advice provided by your local public health agency."
 const val symptoms =
     "COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.\n" +
             "Most common symptoms:\n" +
@@ -34,11 +35,14 @@ const val symptoms =
             "a rash on skin, or discolouration of fingers or toes"
 
 const val treatment =
-    "To date, there are no specific vaccines or medicines for COVID-19. Treatments are under investigation, and will be tested through clinical trials. World Health Organization\n" +
+    "To date, there are no specific vaccines or medicines for COVID-19. Treatments are under investigation, and will be tested through clinical trials monitored closely by World Health Organization (WHO).\n" +
+            "\n" +
             "Self care\n" +
             "If you feel sick you should rest, drink plenty of fluid, and eat nutritious food. Stay in a separate room from other family members, and use a dedicated bathroom if possible. Clean and disinfect frequently touched surfaces.\n" +
             "Everyone should keep a healthy lifestyle at home. Maintain a healthy diet, sleep, stay active, and make social contact with loved ones through the phone or internet. Children need extra love and attention from adults during difficult times. Keep to regular routines and schedules as much as possible.\n" +
             "It is normal to feel sad, stressed, or confused during a crisis. Talking to people you trust, such as friends and family, can help. If you feel overwhelmed, talk to a health worker or counsellor.\n" +
+            "\n" +
             "Medical treatments\n" +
             "If you have mild symptoms and are otherwise healthy, self-isolate and contact your medical provider or a COVID-19 information line for advice.\n" +
-            "Seek medical care if you have a fever, a cough, and difficulty breathing. Call in advance"
+            "Seek medical care if you have a fever, a cough, and difficulty breathing. Call in advance."
+
