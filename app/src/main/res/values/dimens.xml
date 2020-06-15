@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-   <!-- <dimen name="white_bg_height">480dp</dimen>--> //had to change the value
-    <dimen name="white_bg_height">0dp</dimen> //had to change the value
+    <dimen name="white_bg_height">480dp</dimen> //had to change the value
+    <!--<dimen name="white_bg_height">0dp</dimen>--> //had to change the value
     <dimen name="white_bg_margin_top">60dp</dimen>
     <dimen name="covid_dimension">160dp</dimen>
     <dimen name="image_margin">32dp</dimen>
