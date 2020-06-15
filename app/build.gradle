@@ -2,11 +2,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-<<<<<<< HEAD
 apply plugin:  "androidx.navigation.safeargs.kotlin"
-=======
 apply plugin: "androidx.navigation.safeargs.kotlin"
->>>>>>> upstream/master
+
 
 android {
     compileSdkVersion 29
