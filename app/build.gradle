@@ -3,10 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin:  "androidx.navigation.safeargs.kotlin"
-<<<<<<< HEAD
 apply plugin: "androidx.navigation.safeargs.kotlin"
-=======
->>>>>>> e25497686aea4af10eea93fea0aeca70694b139f
 
 
 android {
