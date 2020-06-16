@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragments.PreventionFragment">
 
-
     <data>
 
         <variable
             name="prevention"
             type="com.thedroidcamp.qvid19.ConstantsKt" />
     </data>
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -74,11 +72,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/prevention_fragment_header">
 
-
             <TextView
                 android:id="@+id/prevention_fragment_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
                 android:text="@{com.thedroidcamp.qvid19.ConstantsKt.preventions}"
                 android:lineSpacingMultiplier="1.5"
                 android:padding="16dp"
@@ -88,11 +86,18 @@
 </layout>
 
                <!-- android:fontFamily="sans-serif-black"
+=======
+                android:fontFamily="sans-serif-black"
+>>>>>>> upstream/master
                 android:lineSpacingMultiplier="1.5"
                 android:padding="16dp"
                 android:text="@{prevention.preventions}"
                 android:textColor="@android:color/black" />
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+<<<<<<< HEAD
 </layout>-->
 
+=======
+</layout>
+>>>>>>> upstream/master
