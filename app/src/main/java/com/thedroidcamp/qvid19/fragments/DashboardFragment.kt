@@ -15,15 +15,15 @@ import com.thedroidcamp.qvid19.databinding.FragmentDashboardBinding
  * A simple [Fragment] subclass..
  */
 class DashboardFragment : Fragment() {
-    
+
     lateinit var navController: NavController
     private lateinit var _binding: FragmentDashboardBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                                savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?): View? {
 
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_dashboard,
-                                            container, false)
+            container, false)
 
         _binding.readMoreButton.setOnClickListener { readMore() }
         _binding.takeQuizButton.setOnClickListener { takeQuiz() }
@@ -37,7 +37,6 @@ class DashboardFragment : Fragment() {
 
     private fun readMore() {
         navController.navigate(DashboardFragmentDirections.actionDashboardFragmentToAboutFragment())
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

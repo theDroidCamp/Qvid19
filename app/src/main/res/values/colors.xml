@@ -8,5 +8,13 @@
     <color name="greenish">#4FCCAE</color>
     <color name="purple_ish">#874FCC</color>
 
+    <color name="whitish">#fff</color>
+=======
+    <color name="purple_ish_dark">#573088</color>
+
+    <color name="textLinkActive">#874FCC</color>
+    <color name="textLinkInActive">#0288D1</color>
+>>>>>>> upstream/master
+
 
 </resources>

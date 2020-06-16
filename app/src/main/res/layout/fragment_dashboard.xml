@@ -25,7 +25,9 @@
                 android:src="@drawable/white_background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/covidImage" />
+                app:layout_constraintTop_toBottomOf="@+id/covidImage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
 
             <ImageView
                 android:id="@+id/covidImage"
@@ -50,7 +52,10 @@
                 android:textSize="@dimen/heading_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/whiteBGImageView"
-                app:layout_constraintTop_toTopOf="@+id/whiteBGImageView" />
+                app:layout_constraintTop_toTopOf="@+id/whiteBGImageView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                />
 
             <TextView
                 android:id="@+id/descriptionTextView"
@@ -66,7 +71,10 @@
                 android:textSize="@dimen/description_text_size"
                 app:layout_constraintEnd_toEndOf="@+id/whiteBGImageView"
                 app:layout_constraintStart_toStartOf="@+id/whiteBGImageView"
-                app:layout_constraintTop_toBottomOf="@+id/headingTextView" />
+                app:layout_constraintTop_toBottomOf="@+id/headingTextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                />
 
             <Button
                 android:id="@+id/readMoreButton"
@@ -97,6 +105,44 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/readMoreButton" />
+
+            <!--<com.google.android.material.button.MaterialButton
+                android:id="@+id/readMoreButton"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_marginStart="@dimen/button_side_margin"
+                android:layout_marginTop="@dimen/button_top_margin"
+                android:layout_marginEnd="@dimen/button_side_margin"
+                app:backgroundTint="@color/greenish"
+                android:text="@string/read_more"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:cornerRadius="30dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/takeQuizButton"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_marginStart="@dimen/button_side_margin"
+                android:layout_marginTop="@dimen/button_top_margin"
+                android:layout_marginEnd="@dimen/button_side_margin"
+                app:backgroundTint="@color/purple_ish"
+                android:text="@string/take_quiz"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/readMoreButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:cornerRadius="30dp"
+                />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
