@@ -5,14 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
+//import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import android.widget.Toast
+//import android.widget.Toast
 import com.thedroidcamp.qvid19.MainActivity
-import com.thedroidcamp.qvid19.R
+//import com.thedroidcamp.qvid19.R
+//import com.thedroidcamp.qvid19.databinding.FragmentQuestionOneBinding
 import com.thedroidcamp.qvid19.databinding.FragmentQuestionTwoBinding
-import kotlinx.android.synthetic.main.fragment_question_two.*
+//import kotlinx.android.synthetic.main.fragment_question_two.*
 
 
 class QuestionTwoFragment : Fragment() {
@@ -25,17 +26,16 @@ class QuestionTwoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        _binding = FragmentQuestionTwoBinding.inflate(layoutInflater)
         mainActivity =
             context as MainActivity
         if (mainActivity.q2Answered) {
             _binding.answerGroup.isEnabled = false
             setAllRadioButtonDisable()
         }
-        _binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_question_two, container, false
-        )
-        _binding.questionTwo = this
-        _binding.invalidateAll()
+        //_binding = DataBindingUtil.inflate(
+            //inflater, R.layout.fragment_question_two, container, false
+        //)
         return _binding.root
     }
 

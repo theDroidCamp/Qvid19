@@ -10,36 +10,15 @@ import androidx.navigation.Navigation
 import com.thedroidcamp.qvid19.R
 import com.thedroidcamp.qvid19.databinding.FragmentPreventionBinding
 import com.thedroidcamp.qvid19.preventions
+import kotlinx.android.synthetic.main.fragment_prevention.*
 
 class PreventionFragment : Fragment() {
-
-<<<<<<< HEAD
 
     private lateinit var binding: FragmentPreventionBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-         binding = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_prevention, container, false)
-
-        prevention_fragment_text.text = preventions
-
-        prevention_fragment_previous_btn.setOnClickListener(
-            Navigation.createNavigateOnClickListener(
-                R.id.action_preventionFragment_to_symptomsFragment)
-        )
-
-        prevention_fragment_next_btn.setOnClickListener(
-            Navigation.createNavigateOnClickListener(
-                R.id.action_preventionFragment_to_treatmentsFragment)
-=======
-    private lateinit var binding: FragmentPreventionBinding
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
 
         binding = DataBindingUtil.inflate(
             inflater,
@@ -56,7 +35,6 @@ class PreventionFragment : Fragment() {
             Navigation.createNavigateOnClickListener(
                 R.id.action_preventionFragment_to_treatmentsFragment
             )
->>>>>>> upstream/master
         )
 
         binding.preventionFragmentText.text = preventions
