@@ -116,7 +116,12 @@
         <action
             android:id="@+id/action_symptomsFragment_to_preventionFragment"
             app:destination="@id/preventionFragment"
-            app:popUpTo="@id/preventionFragment" />
+            app:popUpTo="@id/preventionFragment"
+            />
+        <action
+            android:id="@+id/action_symptomsFragment_to_aboutFragment"
+            app:destination="@+id/aboutFragment"
+            app:popUpTo="@id/aboutFragment"/>
     </fragment>
 
     <fragment

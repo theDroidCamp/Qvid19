@@ -21,6 +21,10 @@
     <style name="MyCardView" parent="@style/Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
     </style>
+    <style name="signsStyle">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+    </style>
 
 
     <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="">
