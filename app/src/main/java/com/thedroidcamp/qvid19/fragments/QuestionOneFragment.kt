@@ -1,19 +1,17 @@
 package com.thedroidcamp.qvid19.fragments
 
 import android.os.Bundle
+import android.view.ContextThemeWrapper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.google.android.material.radiobutton.MaterialRadioButton
 import com.thedroidcamp.qvid19.MainActivity
+import com.thedroidcamp.qvid19.R
 import com.thedroidcamp.qvid19.databinding.FragmentQuestionOneBinding
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 
 /**
@@ -25,43 +23,38 @@ private const val ARG_PARAM2 = "param2"
  *  link, calculating score, getting score and setting radio button's state etc.
  */
 
-
-/**
- * A simple [Fragment] subclass.
- * Use the [QuestionOneFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class QuestionOneFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
     lateinit var navController: NavController
     private lateinit var _binding: FragmentQuestionOneBinding
+    private val questionId = 1 //need this because we are using id, not index
 
     private lateinit var mainActivity: MainActivity
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        _binding = FragmentQuestionOneBinding.inflate(layoutInflater)
         mainActivity =
             context as MainActivity // doing this because running i don't know about how to pass the score to next fragment
+
+        //region add these lines only if wants to apply Material Theme
+        val contextThemeWrapper = ContextThemeWrapper(mainActivity, R.style.AppTheme_FullScreen)
+        inflater.cloneInContext(contextThemeWrapper)
+        //endregion
+
+        _binding = FragmentQuestionOneBinding.inflate(layoutInflater)
+
         if (mainActivity.q1Answered) {
             _binding.answerGroup.isEnabled = false
             setAllRadioButtonDisable()
+            setSelection(mainActivity.qnaList[questionId - 1].answerId)
         }
         return _binding.root
+    }
+
+    private fun setSelection(checkedId: Int) {
+        _binding.answerGroup.check(checkedId)
     }
 
     private fun setAllRadioButtonDisable() {
@@ -85,12 +78,17 @@ class QuestionOneFragment : Fragment() {
     }
 
     private fun goToNextQuestion() {
-        when (_binding.answerGroup.checkedRadioButtonId) {
-            -1 -> return
-            _binding.optionThreeRadioBtn.id -> addUpScore()
+        if (!mainActivity.q1Answered) { //adding this because of previous next features, not directly but indirectly it's linked
+            when (_binding.answerGroup.checkedRadioButtonId) {
+                -1 -> return
+                _binding.optionThreeRadioBtn.id -> addUpScore()
+            }
+            //save a state that question one answered already
+            mainActivity.setAnswered(
+                1,
+                _binding.answerGroup.checkedRadioButtonId
+            ) //setting answer id 1 as answered and saving selection
         }
-        //save a state that question one answered already
-        mainActivity.setAnswered(1) //setting answer id 1 as answered
         navController.navigate(QuestionOneFragmentDirections.actionQuestionOneFragmentToQuestionTwoFragment())
     }
 
@@ -98,24 +96,4 @@ class QuestionOneFragment : Fragment() {
         mainActivity.calculateScore(10) //giving 10 point for correct answer
     }
 
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment QuestionOneFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            QuestionOneFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }
