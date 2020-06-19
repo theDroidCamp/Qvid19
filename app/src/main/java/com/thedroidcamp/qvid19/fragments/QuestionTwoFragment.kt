@@ -50,7 +50,7 @@ class QuestionTwoFragment : Fragment() {
         navController.navigate(QuestionTwoFragmentDirections.actionQuestionTwoFragmentToQuestionThreeFragment())
         when (_binding.answerGroup.checkedRadioButtonId) {
             -1 -> return
-            _binding.optionThreeRadioBtn.id -> addUpScore()
+            _binding.optionTwoRadioBtn.id -> addUpScore()
         }
         mainActivity.setAnswered(2)
     }
