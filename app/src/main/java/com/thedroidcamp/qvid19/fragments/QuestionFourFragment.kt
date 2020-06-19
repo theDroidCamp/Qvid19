@@ -1,16 +1,14 @@
 package com.thedroidcamp.qvid19.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.thedroidcamp.qvid19.MainActivity
-import com.thedroidcamp.qvid19.R
 import com.thedroidcamp.qvid19.databinding.FragmentQuestionFourBinding
-import com.thedroidcamp.qvid19.databinding.FragmentQuestionTwoBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,7 +29,6 @@ class QuestionFourFragment : Fragment() {
     lateinit var navController: NavController
     private lateinit var _binding: FragmentQuestionFourBinding
     private lateinit var mainActivity: MainActivity
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
