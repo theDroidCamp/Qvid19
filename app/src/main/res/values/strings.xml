@@ -60,7 +60,8 @@
     6."loss of taste or smell\n"
     7."a rash on skin, or discolouration of fingers or toes"
     </string>
-
+    <string name="score">Score :</string>
+    <string name="q4">Q4</string>
 
 
 </resources>
