@@ -43,6 +43,8 @@
 
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="hooray_fragment_header">Hurray!</string>
+    <string name="congratulations_image">Congratulations Image</string>
 
 
 </resources>
