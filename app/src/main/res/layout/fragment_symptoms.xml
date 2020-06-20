@@ -1,14 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".fragments.SymptomsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <data>
 
-</FrameLayout>
+        <variable
+            name="symptoms"
+            type="com.thedroidcamp.qvid19.ConstantsKt" />
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/signsFragment"
+    android:background="@color/whitish"
+    >
+
+
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SymptomsFragment"
+    android:layout_above="@+id/actionBtn">
+
+        <TextView
+        android:id="@+id/tile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/symptoms_title"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description_signs"
+            style="@style/signsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/signs" />
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/actionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/signs_prev_btn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/green_border"
+            android:text="@string/signs_prev"
+            android:textAllCaps="false"
+            android:textColor="#4FCCAE"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/signs_nxt_btn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/purple_border"
+            android:text="@string/signs_next"
+            android:textAllCaps="false"
+            android:textColor="#874FCC"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>
+
+</layout>

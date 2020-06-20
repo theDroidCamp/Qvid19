@@ -81,6 +81,9 @@
         <action
             android:id="@+id/action_questionFourFragment_to_questionFiveFragment"
             app:destination="@id/questionFiveFragment" />
+        <action
+            android:id="@+id/action_questionFourFragment_to_questionThreeFragment"
+            app:destination="@id/questionThreeFragment" />
     </fragment>
     <fragment
         android:id="@+id/questionTwoFragment"
@@ -116,7 +119,12 @@
         <action
             android:id="@+id/action_symptomsFragment_to_preventionFragment"
             app:destination="@id/preventionFragment"
-            app:popUpTo="@id/preventionFragment" />
+            app:popUpTo="@id/preventionFragment"
+            />
+        <action
+            android:id="@+id/action_symptomsFragment_to_aboutFragment"
+            app:destination="@+id/aboutFragment"
+            app:popUpTo="@id/aboutFragment"/>
     </fragment>
 
     <fragment

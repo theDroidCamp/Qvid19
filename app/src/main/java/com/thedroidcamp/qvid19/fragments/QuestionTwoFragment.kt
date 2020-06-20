@@ -5,25 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
+//import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import android.widget.Toast
+//import android.widget.Toast
 import com.thedroidcamp.qvid19.MainActivity
-import com.thedroidcamp.qvid19.R
+//import com.thedroidcamp.qvid19.R
+//import com.thedroidcamp.qvid19.databinding.FragmentQuestionOneBinding
 import com.thedroidcamp.qvid19.databinding.FragmentQuestionTwoBinding
-import kotlinx.android.synthetic.main.fragment_question_two.*
+//import kotlinx.android.synthetic.main.fragment_question_two.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-//private const val ARG_PARAM1 = "param1"
-//private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [QuestionTwoFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 
 class QuestionTwoFragment : Fragment() {
 
@@ -35,18 +26,16 @@ class QuestionTwoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        _binding = FragmentQuestionTwoBinding.inflate(layoutInflater)
         mainActivity =
-            context as MainActivity // doing this because running i don't know about how to pass the score to next fragment
+            context as MainActivity
         if (mainActivity.q2Answered) {
             _binding.answerGroup.isEnabled = false
             setAllRadioButtonDisable()
         }
-        _binding = DataBindingUtil.inflate<FragmentQuestionTwoBinding>(
-            inflater, R.layout.fragment_question_two, container, false
-        )
-        _binding.questionTwo = this
-        _binding.invalidateAll()
+        //_binding = DataBindingUtil.inflate(
+            //inflater, R.layout.fragment_question_two, container, false
+        //)
         return _binding.root
     }
 
@@ -61,10 +50,9 @@ class QuestionTwoFragment : Fragment() {
         navController.navigate(QuestionTwoFragmentDirections.actionQuestionTwoFragmentToQuestionThreeFragment())
         when (_binding.answerGroup.checkedRadioButtonId) {
             -1 -> return
-            _binding.optionThreeRadioBtn.id -> addUpScore()
+            _binding.optionTwoRadioBtn.id -> addUpScore()
         }
-        //save a state that question one answered already
-        mainActivity.setAnswered(2) //setting answer id 1 as answered
+        mainActivity.setAnswered(2)
     }
 
     private fun goToPrevious() {
@@ -72,7 +60,7 @@ class QuestionTwoFragment : Fragment() {
     }
 
     private fun addUpScore() {
-        mainActivity.calculateScore(10) //giving 10 point for correct answer
+        mainActivity.calculateScore(10)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

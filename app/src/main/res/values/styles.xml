@@ -2,10 +2,10 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/purple_ish</item>
+        <item name="colorPrimaryDark">@color/purple_ish_dark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/purple_ish</item>
     </style>
 
     <style name="AppTheme.FullScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
@@ -20,6 +20,10 @@
 
     <style name="MyCardView" parent="@style/Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
+    </style>
+    <style name="signsStyle">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:paddingTop">8dp</item>
     </style>
 
 
