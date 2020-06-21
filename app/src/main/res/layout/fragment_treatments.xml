@@ -14,8 +14,8 @@
             android:id="@+id/treatmentsFragmentHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:fontFamily="sans-serif"
+            android:layout_marginTop="32dp"
+            android:fontFamily="monospace"
             android:text="@string/treatments_Header"
             android:textAlignment="center"
             android:textColor="#000000"
@@ -27,7 +27,7 @@
 
         <ScrollView
             android:id="@+id/treatmentsFragmentHeaderScrollView"
-            android:layout_height="wrap_content"
+            android:layout_height="510dp"
             android:layout_width="0dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,8 +43,8 @@
                 android:padding="16dp"
                 android:text="@{com.thedroidcamp.qvid19.ConstantsKt.treatment}"
                 android:textColor="#000000"
-                android:textStyle="normal|bold"
-                app:lineHeight="20sp" />
+                android:textSize="18sp"
+                android:textStyle="normal" />
         </ScrollView>
 
         <Button
@@ -57,7 +57,7 @@
             android:background="@drawable/green_border"
             android:text="@string/previous_button"
             android:textAllCaps="false"
-            android:textColor="#dddddd"
+            android:textColor="@color/greenish"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/treatments_fragment_next_button"
             app:layout_constraintHorizontal_bias="0.5"
@@ -75,7 +75,7 @@
             android:background="@drawable/purple_border"
             android:text="@string/next_button"
             android:textAllCaps="false"
-            android:textColor="#dddddd"
+            android:textColor="@color/purple_ish"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
