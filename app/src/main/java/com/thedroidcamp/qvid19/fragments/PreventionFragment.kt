@@ -10,15 +10,15 @@ import androidx.navigation.Navigation
 import com.thedroidcamp.qvid19.R
 import com.thedroidcamp.qvid19.databinding.FragmentPreventionBinding
 import com.thedroidcamp.qvid19.preventions
+import kotlinx.android.synthetic.main.fragment_prevention.*
 
 class PreventionFragment : Fragment() {
 
     private lateinit var binding: FragmentPreventionBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+
 
         binding = DataBindingUtil.inflate(
             inflater,

@@ -46,5 +46,30 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="hooray_fragment_header">Hurray!</string>
+    <string name="congratulations_image">Congratulations Image</string>
+
+    <string name="signs_prev">Previous</string>
+    <string name="signs_next">Next</string>
+    <string name="symptoms_title">Signs and Symptoms</string>
+    <string name="signs">"COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.\n\n"
+    "Most common symptoms:\n"
+    1. "fever\n"
+    2."dry cough\n"
+    3."tiredness\n\n"
+    "Less common symptoms:\n"
+    1."aches and pains\n"
+    2."sore throat\n"
+    3."diarrhoea\n"
+    4."conjunctivitis\n"
+    5."headache\n"
+    6."loss of taste or smell\n"
+    7."a rash on skin, or discolouration of fingers or toes"
+    </string>
+    <string name="score">Score :</string>
+    <string name="q4">Q4</string>
+    <string name="about_covid">What is COVID19?</string>
+
+
 
 </resources>
