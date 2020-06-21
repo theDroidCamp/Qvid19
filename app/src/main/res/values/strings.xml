@@ -28,6 +28,23 @@
     <string name="Question_five_option_two">Drink chloroquine</string>
     <string name="Question_five_option_three">Seek medical attention</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="prevention_header">Prevention</string>
+    <string name="previous_button">Previous</string>
+    <string name="next_button">Next</string>
+
+    <string name="hello_blank_fragment">Hello</string>
+    <string name="qvid_19">QVID \'19</string>
+    <string name="description">QVID \'19 is a quiz app about the dreaded pandemic named corona virus which started in China and spread around the world</string>
+    <string name="read_more">Read more...</string>
+    <string name="take_quiz">Take Quiz</string>
+    <string name="white_background">White background</string>
+    <string name="covid_image">Covid Image</string>
+    <string name="treatments_Header">Treatments</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
 
 </resources>

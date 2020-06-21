@@ -1,14 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".fragments.DashboardFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:fillViewport="true">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_ish">
+
+
+            <ImageView
+                android:id="@+id/whiteBGImageView"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/white_bg_height"
+                android:layout_marginTop="@dimen/white_bg_margin_top"
+                android:contentDescription="@string/white_background"
+                android:src="@drawable/white_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/covidImage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/covidImage"
+                android:layout_width="@dimen/covid_dimension"
+                android:layout_height="@dimen/covid_dimension"
+                android:layout_marginTop="@dimen/image_margin"
+                android:layout_marginEnd="@dimen/image_margin"
+                android:contentDescription="@string/covid_image"
+                android:src="@drawable/covidimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/headingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/heading_margin_top"
+                android:gravity="center_vertical"
+                android:text="@string/qvid_19"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/heading_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/whiteBGImageView"
+                app:layout_constraintTop_toTopOf="@+id/whiteBGImageView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                />
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="@dimen/description_line_spacing"
+                android:paddingLeft="@dimen/text_margin"
+                android:paddingRight="@dimen/text_margin"
+                android:text="@string/description"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/description_text_size"
+                app:layout_constraintEnd_toEndOf="@+id/whiteBGImageView"
+                app:layout_constraintStart_toStartOf="@+id/whiteBGImageView"
+                app:layout_constraintTop_toBottomOf="@+id/headingTextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                />
+
+            <Button
+                android:id="@+id/readMoreButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/button_side_margin"
+                android:layout_marginTop="@dimen/button_top_margin"
+                android:layout_marginEnd="@dimen/button_side_margin"
+                android:background="@drawable/green_rounded_corners"
+                android:text="@string/read_more"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+            <Button
+                android:id="@+id/takeQuizButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/button_side_margin"
+                android:layout_marginTop="@dimen/button_top_margin"
+                android:layout_marginEnd="@dimen/button_side_margin"
+                android:background="@drawable/purple_rounded_corners"
+                android:text="@string/take_quiz"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/readMoreButton" />
+
+            <!--<com.google.android.material.button.MaterialButton
+                android:id="@+id/readMoreButton"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_marginStart="@dimen/button_side_margin"
+                android:layout_marginTop="@dimen/button_top_margin"
+                android:layout_marginEnd="@dimen/button_side_margin"
+                app:backgroundTint="@color/greenish"
+                android:text="@string/read_more"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:cornerRadius="30dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/takeQuizButton"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_marginStart="@dimen/button_side_margin"
+                android:layout_marginTop="@dimen/button_top_margin"
+                android:layout_marginEnd="@dimen/button_side_margin"
+                app:backgroundTint="@color/purple_ish"
+                android:text="@string/take_quiz"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/readMoreButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:cornerRadius="30dp"
+                />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
