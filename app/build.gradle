@@ -29,12 +29,8 @@ android {
 
 
     buildFeatures{
-        dataBinding = true
-        // for view binding :
-        // viewBinding = true
-//upstream/master
-
-         viewBinding = true
+        dataBinding true
+        viewBinding true
     }
 }
 
