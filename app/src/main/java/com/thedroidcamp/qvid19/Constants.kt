@@ -46,3 +46,7 @@ const val treatment =
             "If you have mild symptoms and are otherwise healthy, self-isolate and contact your medical provider or a COVID-19 information line for advice.\n" +
             "Seek medical care if you have a fever, a cough, and difficulty breathing. Call in advance."
 
+const val hooray =
+    "You now have a great knowledge\n" +
+            "about COVID'19.\n" +
+            "Test your knowledge."

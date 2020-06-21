@@ -43,6 +43,10 @@
 
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <string name="hooray_fragment_header">Hurray!</string>
+    <string name="congratulations_image">Congratulations Image</string>
+
     <string name="signs_prev">Previous</string>
     <string name="signs_next">Next</string>
     <string name="symptoms_title">Signs and Symptoms</string>
@@ -62,6 +66,7 @@
     </string>
     <string name="score">Score :</string>
     <string name="q4">Q4</string>
+
 
 
 </resources>
