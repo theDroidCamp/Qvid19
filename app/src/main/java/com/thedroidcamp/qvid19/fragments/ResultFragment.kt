@@ -13,25 +13,37 @@ import com.thedroidcamp.qvid19.databinding.FragmentResultBinding
 
 class ResultFragment : Fragment() {
 
-    private lateinit var binding : FragmentResultBinding
+    private lateinit var binding: FragmentResultBinding
     private lateinit var mainActivity: MainActivity
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_result, container, false)
+            inflater, R.layout.fragment_result, container, false
+        )
 
-        binding.resultFragButton.setOnClickListener {
-            Navigation.createNavigateOnClickListener(
-                R.id.action_resultFragment_to_questionOneFragment)
-        }
-
-        mainActivity = context as MainActivity
-        val finalScore = mainActivity.getScore()
-
-        binding.resultScoreNumber.text = finalScore.toString()
+        printFinalScore()
+        setFragmentToOriginalState()
 
         return binding.root
     }
+
+    fun printFinalScore() {
+        mainActivity = context as MainActivity
+        val finalScore = mainActivity.getScore()
+        binding.resultScoreNumber.text = finalScore.toString()
+    }
+
+    fun setFragmentToOriginalState() {
+        binding.resultFragButton.setOnClickListener(
+            Navigation.createNavigateOnClickListener(
+                R.id.action_resultFragment_to_questionOneFragment
+            )
+        )
+        mainActivity.clearQNAs()
+    }
+
 }
