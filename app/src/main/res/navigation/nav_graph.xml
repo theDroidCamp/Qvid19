@@ -107,7 +107,12 @@
         android:id="@+id/resultFragment"
         android:name="com.thedroidcamp.qvid19.fragments.ResultFragment"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result" />
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_questionOneFragment"
+            app:destination="@id/questionOneFragment"
+            app:popUpTo="@id/questionOneFragment" />
+    </fragment>
     <fragment
         android:id="@+id/symptomsFragment"
         android:name="com.thedroidcamp.qvid19.fragments.SymptomsFragment"

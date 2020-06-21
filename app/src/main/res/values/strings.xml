@@ -61,6 +61,12 @@
     7."a rash on skin, or discolouration of fingers or toes"
     </string>
 
+    <string name="result_frag_image">Congrats Ribbon</string>
+    <string name="result_text_congrats1">Congrats!</string>
+    <string name="result_text_congrats2">You answered all questions.</string>
+    <string name="result_score_text">score: </string>
+    <string name="result_button">Retake Quiz Again</string>
+
 
 
 </resources>
