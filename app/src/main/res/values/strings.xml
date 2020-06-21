@@ -27,6 +27,8 @@
     <string name="Question_five_option_one">Chill at home</string>
     <string name="Question_five_option_two">Drink chloroquine</string>
     <string name="Question_five_option_three">Seek medical attention</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
 
     <string name="prevention_header">Prevention</string>
     <string name="previous_button">Previous</string>
@@ -43,6 +45,10 @@
 
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <string name="hooray_fragment_header">Hurray!</string>
+    <string name="congratulations_image">Congratulations Image</string>
+
     <string name="signs_prev">Previous</string>
     <string name="signs_next">Next</string>
     <string name="symptoms_title">Signs and Symptoms</string>
@@ -60,6 +66,9 @@
     6."loss of taste or smell\n"
     7."a rash on skin, or discolouration of fingers or toes"
     </string>
+    <string name="score">Score :</string>
+    <string name="q4">Q4</string>
+    <string name="about_covid">What is COVID19?</string>
 
     <string name="result_frag_image">Congrats Ribbon</string>
     <string name="result_text_congrats1">Congrats!</string>

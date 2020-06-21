@@ -22,6 +22,7 @@ class QuestionTwoFragment : Fragment() {
     private lateinit var _binding: FragmentQuestionTwoBinding
     private lateinit var mainActivity: MainActivity
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -50,7 +51,7 @@ class QuestionTwoFragment : Fragment() {
         navController.navigate(QuestionTwoFragmentDirections.actionQuestionTwoFragmentToQuestionThreeFragment())
         when (_binding.answerGroup.checkedRadioButtonId) {
             -1 -> return
-            _binding.optionThreeRadioBtn.id -> addUpScore()
+            _binding.optionTwoRadioBtn.id -> addUpScore()
         }
         mainActivity.setAnswered(2)
     }
@@ -70,6 +71,7 @@ class QuestionTwoFragment : Fragment() {
         _binding.nextLink.setOnClickListener { goToNext() }
         _binding.previousLink.setOnClickListener { goToPrevious() }
     }
+
 
 
 }

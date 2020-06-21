@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".fragments.PreventionFragment">
+    tools:context=".fragments.SymptomsFragment">
 
     <data>
 
@@ -28,10 +28,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="32dp"
         android:text="@string/symptoms_title"
         android:textColor="@android:color/black"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
         <TextView
@@ -39,8 +39,11 @@
             style="@style/signsStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="28dp"
             android:layout_marginTop="70dp"
             android:paddingStart="16dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:paddingEnd="16dp"
             android:text="@string/signs" />
     </FrameLayout>

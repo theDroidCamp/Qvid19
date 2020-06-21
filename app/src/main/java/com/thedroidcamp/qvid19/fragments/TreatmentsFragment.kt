@@ -39,4 +39,5 @@ class TreatmentsFragment : Fragment() {
 
         return binding.root
     }
+
 }

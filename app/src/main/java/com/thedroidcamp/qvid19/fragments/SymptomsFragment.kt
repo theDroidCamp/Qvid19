@@ -11,6 +11,7 @@ package com.thedroidcamp.qvid19.fragments
                 import com.thedroidcamp.qvid19.databinding.FragmentSymptomsBinding
 
 class SymptomsFragment : Fragment() {
+
     private lateinit var binding: FragmentSymptomsBinding
 
     override fun onCreateView(inflater: LayoutInflater,
@@ -30,5 +31,6 @@ class SymptomsFragment : Fragment() {
                 return binding.root
             }
 }
+
 
 
