@@ -96,11 +96,11 @@
         android:label="fragment_question_two"
         tools:layout="@layout/fragment_question_two">
         <action
-            android:id="@+id/action_questionTwoFragment_to_questionThreeFragment"
-            app:destination="@id/questionThreeFragment" />
-        <action
             android:id="@+id/action_questionTwoFragment_to_questionOneFragment2"
             app:destination="@id/questionOneFragment" />
+        <action
+            android:id="@+id/action_questionTwoFragment_to_questionThreeFragment"
+            app:destination="@id/questionThreeFragment" />
     </fragment>
     <fragment
         android:id="@+id/questionThreeFragment"
@@ -115,7 +115,11 @@
         android:id="@+id/resultFragment"
         android:name="com.thedroidcamp.qvid19.fragments.ResultFragment"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result" />
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_questionOneFragment"
+            app:destination="@id/questionOneFragment" />
+    </fragment>
     <fragment
         android:id="@+id/symptomsFragment"
         android:name="com.thedroidcamp.qvid19.fragments.SymptomsFragment"
@@ -124,12 +128,11 @@
         <action
             android:id="@+id/action_symptomsFragment_to_preventionFragment"
             app:destination="@id/preventionFragment"
-            app:popUpTo="@id/preventionFragment"
-            />
+            app:popUpTo="@id/preventionFragment" />
         <action
             android:id="@+id/action_symptomsFragment_to_aboutFragment"
             app:destination="@+id/aboutFragment"
-            app:popUpTo="@id/aboutFragment"/>
+            app:popUpTo="@id/aboutFragment" />
     </fragment>
 
     <fragment
@@ -141,10 +144,10 @@
             android:id="@+id/action_treatmentsFragment_to_hoorayFragment"
             app:destination="@id/hoorayFragment"
             app:popUpTo="@id/hoorayFragment"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_treatmentsFragment_to_preventionFragment"
             app:destination="@id/preventionFragment"
-            app:popUpTo="@id/preventionFragment"/>
+            app:popUpTo="@id/preventionFragment" />
     </fragment>
 </navigation>

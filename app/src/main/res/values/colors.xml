@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+<!--    <color name="colorPrimaryDark">#3700B3</color>-->
+    <color name="colorPrimaryDark">#573088</color>
     <color name="colorAccent">#03DAC5</color>
-
 
     <color name="greenish">#4FCCAE</color>
     <color name="purple_ish">#874FCC</color>
 
     <color name="whitish">#fff</color>
-=======
     <color name="purple_ish_dark">#573088</color>
 
     <color name="textLinkActive">#874FCC</color>
     <color name="textLinkInActive">#0288D1</color>
->>>>>>> upstream/master
-
 
 </resources>

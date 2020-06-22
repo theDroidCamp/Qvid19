@@ -42,7 +42,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun setQNA(questionId: Int, checkedAnswerId: Int): Boolean {
         qnaList.add(questionId-1, QNA(questionId = questionId, answerId = checkedAnswerId))
-        q1Answered = true
+        //q1Answered = true
+        setAnswered(questionId)
         return true
     }
 

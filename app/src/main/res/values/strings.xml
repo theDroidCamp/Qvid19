@@ -70,6 +70,12 @@
     <string name="q4">Q4</string>
     <string name="about_covid">What is COVID19?</string>
 
+    <string name="result_frag_image">Congrats Ribbon</string>
+    <string name="result_text_congrats1">Congrats!</string>
+    <string name="result_text_congrats2">You answered all questions.</string>
+    <string name="result_score_text">score: </string>
+    <string name="result_button">Retake Quiz Again</string>
+
 
 
 </resources>
