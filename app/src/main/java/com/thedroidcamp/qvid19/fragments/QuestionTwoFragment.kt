@@ -1,18 +1,19 @@
 package com.thedroidcamp.qvid19.fragments
 
+//import androidx.databinding.DataBindingUtil
+//import android.widget.Toast
+//import com.thedroidcamp.qvid19.R
+//import com.thedroidcamp.qvid19.databinding.FragmentQuestionOneBinding
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-//import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-//import android.widget.Toast
 import com.thedroidcamp.qvid19.MainActivity
-//import com.thedroidcamp.qvid19.R
-//import com.thedroidcamp.qvid19.databinding.FragmentQuestionOneBinding
 import com.thedroidcamp.qvid19.databinding.FragmentQuestionTwoBinding
+
 //import kotlinx.android.synthetic.main.fragment_question_two.*
 
 
@@ -35,7 +36,7 @@ class QuestionTwoFragment : Fragment() {
             setAllRadioButtonDisable()
         }
         //_binding = DataBindingUtil.inflate(
-            //inflater, R.layout.fragment_question_two, container, false
+        //inflater, R.layout.fragment_question_two, container, false
         //)
         return _binding.root
     }
@@ -71,7 +72,6 @@ class QuestionTwoFragment : Fragment() {
         _binding.nextLink.setOnClickListener { goToNext() }
         _binding.previousLink.setOnClickListener { goToPrevious() }
     }
-
 
 
 }

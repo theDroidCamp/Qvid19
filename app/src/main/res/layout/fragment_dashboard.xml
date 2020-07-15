@@ -23,11 +23,10 @@
                 android:layout_marginTop="@dimen/white_bg_margin_top"
                 android:contentDescription="@string/white_background"
                 android:src="@drawable/white_background"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/covidImage"
-                app:layout_constraintBottom_toBottomOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/covidImage" />
 
             <ImageView
                 android:id="@+id/covidImage"
@@ -50,12 +49,11 @@
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/heading_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/whiteBGImageView"
                 app:layout_constraintTop_toTopOf="@+id/whiteBGImageView"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0"
-                />
+                app:layout_constraintVertical_bias="0" />
 
             <TextView
                 android:id="@+id/descriptionTextView"
@@ -69,12 +67,11 @@
                 android:text="@string/description"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/description_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/whiteBGImageView"
                 app:layout_constraintStart_toStartOf="@+id/whiteBGImageView"
                 app:layout_constraintTop_toBottomOf="@+id/headingTextView"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0"
-                />
+                app:layout_constraintVertical_bias="0" />
 
             <Button
                 android:id="@+id/readMoreButton"

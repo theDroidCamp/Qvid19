@@ -13,7 +13,7 @@ import com.thedroidcamp.qvid19.databinding.FragmentQuestionFourBinding
 class QuestionFourFragment : Fragment() {
 
 
-    lateinit var navController: NavController
+    private lateinit var navController: NavController
     private lateinit var _binding: FragmentQuestionFourBinding
     private lateinit var mainActivity: MainActivity
 
@@ -72,27 +72,6 @@ class QuestionFourFragment : Fragment() {
         _binding.scoreView.text = mainActivity.currentScore.toString()
         _binding.nextLink.setOnClickListener { goToNext() }
         _binding.previousLink.setOnClickListener { goToPrevious() }
-    }
-
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment QuestionFourFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-//        @JvmStatic
-//        fun newInstance(param1: String, param2: String) =
-//            QuestionFourFragment().apply {
-//                arguments = Bundle().apply {
-//                    putString(ARG_PARAM1, param1)
-//                    putString(ARG_PARAM2, param2)
-//                }
-//            }
     }
 
 }

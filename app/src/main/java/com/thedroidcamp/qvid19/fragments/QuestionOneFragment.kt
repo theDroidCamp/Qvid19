@@ -2,13 +2,12 @@ package com.thedroidcamp.qvid19.fragments
 
 import android.os.Bundle
 import android.view.ContextThemeWrapper
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.google.android.material.radiobutton.MaterialRadioButton
 import com.thedroidcamp.qvid19.MainActivity
 import com.thedroidcamp.qvid19.R
 import com.thedroidcamp.qvid19.databinding.FragmentQuestionOneBinding
@@ -22,7 +21,6 @@ import com.thedroidcamp.qvid19.databinding.FragmentQuestionOneBinding
  *  then i called some basic functions from the activity,
  *  link, calculating score, getting score and setting radio button's state etc.
  */
-
 
 
 /**
@@ -42,7 +40,7 @@ class QuestionOneFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-          //  param1 = it.getString(ARG_PARAM1)
+            //  param1 = it.getString(ARG_PARAM1)
             //param2 = it.getString(ARG_PARAM2)
         }
     }
@@ -131,5 +129,5 @@ class QuestionOneFragment : Fragment() {
 //                }
 //            }
 
-}
+    }
 }
