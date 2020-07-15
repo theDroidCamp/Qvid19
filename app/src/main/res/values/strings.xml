@@ -75,7 +75,8 @@
     <string name="result_text_congrats2">You answered all questions.</string>
     <string name="result_score_text">score: </string>
     <string name="result_button">Retake Quiz Again</string>
-
+    <string name="q3">Q3</string>
+    <string name="q5">Q5</string>
 
 
 </resources>

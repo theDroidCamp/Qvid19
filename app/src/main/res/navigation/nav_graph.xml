@@ -77,6 +77,9 @@
         <action
             android:id="@+id/action_questionFiveFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_questionFiveFragment_to_questionFourFragment"
+            app:destination="@id/questionFourFragment" />
     </fragment>
     <fragment
         android:id="@+id/questionFourFragment"
@@ -110,6 +113,9 @@
         <action
             android:id="@+id/action_questionThreeFragment_to_questionFourFragment"
             app:destination="@id/questionFourFragment" />
+        <action
+            android:id="@+id/action_questionThreeFragment_to_questionTwoFragment"
+            app:destination="@id/questionThreeFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"

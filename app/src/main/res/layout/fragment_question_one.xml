@@ -1,201 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.QuestionOneFragment"
     android:theme="@style/AppTheme.FullScreen"
-    >
+    tools:context=".fragments.QuestionOneFragment">
 
-   <!-- <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />-->
+    <!-- <TextView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:text="@string/hello_blank_fragment" />-->
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/layoutMargin"
-        >
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/scoreView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/mainDivider"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintVertical_bias="1"
-            android:text="Score :"
-            android:layout_marginBottom="5dp"
-            android:layout_marginEnd="10dp"
-            android:textSize="@dimen/secondaryTextSize"
-            android:textColor="#ffffff"
-            />
+        android:padding="@dimen/layoutMargin">
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/mainDivider"
-            app:layout_constraintVertical_bias="1"
-            app:layout_constraintHorizontal_bias="1"
-            android:text="11"
-            android:textSize="@dimen/heading_text_size"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Score :"
             android:textColor="#ffffff"
+            android:textSize="@dimen/secondaryTextSize"
+            app:layout_constraintBottom_toTopOf="@+id/mainDivider"
+            app:layout_constraintEnd_toStartOf="@+id/scoreView"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/scoreView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/heading_text_size"
             android:textStyle="bold"
-            />
+            app:layout_constraintBottom_toTopOf="@+id/mainDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
 
         <View
+            android:id="@+id/mainDivider"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.2"
-            android:id="@+id/mainDivider"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
 
         <com.google.android.material.card.MaterialCardView
+            style="@style/MyCardView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mainDivider"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0"
-            app:cardCornerRadius="@dimen/cardRadius"
-            style="@style/MyCardView"
             android:layout_marginTop="@dimen/cardMarginTop"
+            app:cardCornerRadius="@dimen/cardRadius"
             app:contentPadding="@dimen/cardContentPadding"
-            >
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainDivider"
+            app:layout_constraintVertical_bias="0">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
                 >
+
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/questionNoView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Q1"
                     android:textSize="@dimen/questionNoTextSize"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
-                    android:id="@+id/questionNoView"
-                    />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0" />
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/questionView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/questionNoView"
-                    app:layout_constraintBottom_toTopOf="@+id/cardDiv1"
-                    android:text="@string/Question1"
                     android:gravity="center"
+                    android:text="@string/Question1"
                     android:textSize="@dimen/questionTextSize"
-                    android:id="@+id/questionView"
-                    />
+                    app:layout_constraintBottom_toTopOf="@+id/cardDiv1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/questionNoView" />
 
                 <View
+                    android:id="@+id/cardDiv1"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/questionNoView"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintVertical_bias="0.3"
                     android:background="@android:color/transparent"
-                    android:id="@+id/cardDiv1"
-                    />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/questionNoView"
+                    app:layout_constraintVertical_bias="0.3" />
 
                 <RadioGroup
+                    android:id="@+id/answerGroup"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardDiv1"
-                    app:layout_constraintBottom_toTopOf="@+id/cardDiv2"
-                    app:layout_constraintVertical_bias="0.5"
-                    android:orientation="vertical"
                     android:gravity="center|start"
-                    android:id="@+id/answerGroup"
-                    >
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/cardDiv2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardDiv1"
+                    app:layout_constraintVertical_bias="0.5">
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/optionOneRadioBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Question_one_option_one"
-                        android:id="@+id/optionOneRadioBtn"
-                        android:textSize="@dimen/radioBtnTextSize"
-                        />
+                        android:textSize="@dimen/radioBtnTextSize" />
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/optionTwoRadioBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Question_one_option_two"
-                        android:id="@+id/optionTwoRadioBtn"
-                        android:textSize="@dimen/radioBtnTextSize"
-                        />
+                        android:textSize="@dimen/radioBtnTextSize" />
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/optionThreeRadioBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Question_one_option_three"
-                        android:id="@+id/optionThreeRadioBtn"
-                        android:textSize="@dimen/radioBtnTextSize"
-                        />
+                        android:textSize="@dimen/radioBtnTextSize" />
                 </RadioGroup>
 
                 <View
+                    android:id="@+id/cardDiv2"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/questionNoView"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintVertical_bias="0.8"
                     android:background="@android:color/transparent"
-                    android:id="@+id/cardDiv2"
-                    />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/questionNoView"
+                    app:layout_constraintVertical_bias="0.8" />
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardDiv2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintVertical_bias="0.5"
-                    android:text="@string/previous"
-                    app:layout_constraintHorizontal_bias="0"
-                    android:textSize="@dimen/nextPrevTextSize"
-                    android:textStyle="bold"
-                    android:textColor="@color/textLinkInActive"
                     android:id="@+id/previousLink"
-                    />
-                <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardDiv2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintVertical_bias="0.5"
-                    android:text="@string/next"
-                    app:layout_constraintHorizontal_bias="1"
+                    android:text="@string/previous"
+                    android:textColor="@color/textLinkInActive"
                     android:textSize="@dimen/nextPrevTextSize"
                     android:textStyle="bold"
-                    android:textColor="@color/textLinkActive"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardDiv2"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/nextLink"
-                    />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:textColor="@color/textLinkActive"
+                    android:textSize="@dimen/nextPrevTextSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardDiv2"
+                    app:layout_constraintVertical_bias="0.5" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>

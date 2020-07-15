@@ -1,15 +1,14 @@
 package com.thedroidcamp.qvid19.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.thedroidcamp.qvid19.R
 import com.thedroidcamp.qvid19.databinding.FragmentHoorayBinding
-import com.thedroidcamp.qvid19.databinding.FragmentPreventionBinding
 import com.thedroidcamp.qvid19.hooray
 
 class HoorayFragment : Fragment() {
@@ -24,7 +23,8 @@ class HoorayFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_hooray, container, false)
+            R.layout.fragment_hooray, container, false
+        )
 
         binding.hoorayFragmentText.text = hooray
 

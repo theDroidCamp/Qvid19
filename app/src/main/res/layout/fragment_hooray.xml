@@ -47,8 +47,8 @@
             android:layout_height="100dp"
             android:background="#ffffff"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/hooray_Fragment_Take_Quiz_Button"
@@ -57,12 +57,12 @@
             android:layout_marginTop="50dp"
             android:layout_marginBottom="50dp"
             android:background="@drawable/purple_border"
-            android:textColor="@color/purple_ish"
             android:text="@string/take_quiz"
-            app:layout_constraintTop_toTopOf="@id/cardView_White_Background"
+            android:textColor="@color/purple_ish"
             app:layout_constraintBottom_toBottomOf="@id/cardView_White_Background"
+            app:layout_constraintEnd_toEndOf="@id/cardView_White_Background"
             app:layout_constraintStart_toStartOf="@id/cardView_White_Background"
-            app:layout_constraintEnd_toEndOf="@id/cardView_White_Background"/>
+            app:layout_constraintTop_toTopOf="@id/cardView_White_Background" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
